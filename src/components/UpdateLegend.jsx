@@ -13,7 +13,7 @@ const Legend = styled.legend`
 
   @media (max-width: 768px) {
     position: absolute;
-    bottom: -40px;
+    bottom: -60px;
     left: 0;
     right: 0;
     margin: 0 auto;
