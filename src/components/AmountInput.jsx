@@ -8,7 +8,7 @@ const AmountField = styled.div`
   height: 76px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -21,11 +21,6 @@ const AmountLabel = styled.label`
   font-size: 16px;
   line-height: 20px;
   color: #000000;
-  margin-bottom: 8px;
-
-  @media (max-width: 500px) {
-    font-size: 14px;
-  }
 `;
 
 const AmountInputContainer = styled.div`
@@ -87,7 +82,7 @@ export default function AmountInput() {
   const { amount, handleAmountChange, error } = useContext(CurrencyContext);
 
   const handleChange = (e) => {
-    const value = e.target.value.replace(/[^0-9.]/g, "");
+    const value = e.target.value;
     handleAmountChange(value);
   };
 

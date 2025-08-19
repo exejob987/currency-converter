@@ -24,14 +24,22 @@ const InverseConversion = styled.div`
 `;
 
 export default function Result() {
-  const { amount, fromCurrency, toCurrency, convertedAmount, currencyNames, loading } =
-    useContext(CurrencyContext);
+  const {
+    amount,
+    fromCurrency,
+    toCurrency,
+    convertedAmount,
+    currencyNames,
+    exchangeRates,
+    loading,
+  } = useContext(CurrencyContext);
 
   const safeAmount = Number(amount) || 0;
   const safeConverted = Number(convertedAmount) || 0;
 
-  const inverseAmount =
-    safeConverted !== 0 ? (1 / safeConverted).toFixed(6) : 0;
+  const directRate = exchangeRates[toCurrency] || 0;
+
+  const inverseRate = directRate !== 0 ? (1 / directRate).toFixed(6) : 0;
 
   return (
     <ResultContainer>
@@ -41,10 +49,10 @@ export default function Result() {
       </MainConversion>
 
       <InverseConversion>
-        1 {currencyNames[toCurrency] || toCurrency} = {inverseAmount}{" "}
-        {currencyNames[fromCurrency] || fromCurrency}
+        1 {toCurrency} = {inverseRate} {fromCurrency}
       </InverseConversion>
-       {loading && <Loader />}
+
+      {loading && <Loader />}
     </ResultContainer>
   );
 }

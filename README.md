@@ -1,12 +1,40 @@
-# React + Vite
+# Currency Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based web application for converting currencies in real-time using the Vatcomply API (https://api.vatcomply.com/rates). The app leverages the React Context API for centralized state management, ensuring modularity and scalability. The UI is styled to precisely match the provided Figma design (https://www.figma.com/design/c0W8ZoOtf8enDe7dDshaPJ/Exchange-challenge), featuring a responsive layout, intuitive interactions, and a clean aesthetic with a gradient background, Pacifico font, and forestgreen accents.
 
-Currently, two official plugins are available:
+## Features
+- Real-Time Conversion: Converts currencies using live exchange rates from the Vatcomply API.
+- Default State: Initializes with 1.00 USD to EUR conversion on page load.
+- Automatic Updates: Recalculates the converted amount instantly when the input amount or currencies change.
+- Input Validation: Prevents negative amounts with clear error messaging.
+- Currency Swap: Allows users to swap "from" and "to" currencies with a single click.
+- Responsive Design: Adapts seamlessly to different screen sizes for mobile and desktop usability.
+- Context API: Manages state globally for a scalable and maintainable codebase.
+- Figma Compliance: Matches the Figma design, including colors (#228B22 for labels/result, #E2FCBB for swap button), fonts (Pacifico for heading), and layout.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
+- Node.js 20.16.0
+- npm or yarn
 
-## Expanding the ESLint configuration
+## Getting Started
+1. Clone the repository: `git clone https://github.com/exejob987/currency-converter.git`
+2. Navigate to the project directory: `cd currency-converter`
+3. Install dependencies: `npm install`
+4. Start the development server: `npm run dev`
+5. Open your browser and visit `http://localhost:5173` to use the application.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Environment Variables
+To configure the API endpoint, the application uses environment variables:
+1. Copy the `env.example` file to `.env`: cp env.example .env
+2. Open the `.env` file and ensure the `VITE_EXCHANGE_API` is set to: VITE_EXCHANGE_API=https://api.vatcomply.com/rates?base=
+
+## Dependencies
+- `react`: Core library for building the user interface.
+- `axios`: For making API requests to fetch exchange rates from Vatcomply.
+- `vite`: Fast development server and build tool for React.
+
+## API Usage
+The application uses the Vatcomply API (`https://api.vatcomply.com/rates?base=USD`) to fetch real-time exchange rates. No API key is required.
+
+## License
+Unlicensed, released into the public domain.
