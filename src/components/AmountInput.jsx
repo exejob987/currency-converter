@@ -82,7 +82,7 @@ export default function AmountInput() {
   const { amount, handleAmountChange, error } = useContext(CurrencyContext);
 
   const handleChange = (e) => {
-    const value = e.target.value.replace(/[^0-9.]/g, "");
+    const value = e.target.value;
     handleAmountChange(value);
   };
 
