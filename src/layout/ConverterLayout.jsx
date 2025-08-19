@@ -1,4 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components";
+import "@fontsource/inter";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
 
 export const GlobalStyle = createGlobalStyle`
   body {

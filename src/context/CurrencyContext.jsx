@@ -80,6 +80,7 @@ export const CurrencyProvider = ({ children }) => {
         currencies,
         currencyNames,
         loading,
+        exchangeRates,
         setLoading,
         setFromCurrency,
         setToCurrency,

@@ -9,7 +9,7 @@ const SelectorField = styled.div`
   display: flex;
   height: 76px;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -90,6 +90,7 @@ export default function CurrencySelector({ type }) {
     setFromCurrency,
     setToCurrency,
     currencies,
+    currencyNames,
   } = useContext(CurrencyContext);
 
   const value = type === "from" ? fromCurrency : toCurrency;
@@ -116,7 +117,7 @@ export default function CurrencySelector({ type }) {
       <SelectorLabel>{type === "from" ? "From" : "To"}</SelectorLabel>
       <SelectorContainer ref={containerRef}>
         <SelectorInput onClick={() => setOpen(!open)}>
-          {value}
+          {currencyNames[value]}
           <SelectorArrow src={arrow_select} alt="arrow" />
         </SelectorInput>
 
@@ -135,7 +136,7 @@ export default function CurrencySelector({ type }) {
                     setOpen(false);
                   }}
                 >
-                  {currency}
+                  {currencyNames[currency]}
                 </OptionItem>
               ))}
           </OptionsList>

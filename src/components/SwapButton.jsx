@@ -11,6 +11,11 @@ const ButtonWrapper = styled.div`
   position: relative;
   width: 76px;
   height: 76px;
+  @media (max-width: 768px) {
+    align-items: center;
+    justify-content: left;
+    height: auto;
+  }
 `;
 
 const Icon = styled.img`
