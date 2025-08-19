@@ -20,7 +20,7 @@ const CardContainer = styled.div`
   position: relative;
 
   @media (max-width: 500px) {
-    width: 80%;
+    width: 65%;
     margin: -130px auto 0 auto;
   }
 `;
@@ -35,6 +35,7 @@ const InputsRow = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
+    padding-bottom: 30px;
     justify-content: left;
     align-items: start;
     gap: 10px;

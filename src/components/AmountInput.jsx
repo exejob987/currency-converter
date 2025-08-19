@@ -8,7 +8,7 @@ const AmountField = styled.div`
   height: 76px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -21,11 +21,6 @@ const AmountLabel = styled.label`
   font-size: 16px;
   line-height: 20px;
   color: #000000;
-  margin-bottom: 8px;
-
-  @media (max-width: 500px) {
-    font-size: 14px;
-  }
 `;
 
 const AmountInputContainer = styled.div`

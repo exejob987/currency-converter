@@ -5,7 +5,7 @@ import { CurrencyContext } from "../context/CurrencyContext";
 const Legend = styled.legend`
   width: auto;
   margin-left: auto;
-  margin-top: 10px;
+  padding: 15px;
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
@@ -17,7 +17,7 @@ const Legend = styled.legend`
     left: 0;
     right: 0;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
   }
 `;
 
