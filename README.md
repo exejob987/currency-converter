@@ -13,7 +13,7 @@ A React-based web application for converting currencies in real-time using the V
 - Figma Compliance: Matches the Figma design, including colors (#228B22 for labels/result, #E2FCBB for swap button), fonts (Pacifico for heading), and layout.
 
 ## Prerequisites
-- Node.js 20
+- Node.js 20.16.0
 - npm or yarn
 
 ## Getting Started
@@ -35,12 +35,6 @@ To configure the API endpoint, the application uses environment variables:
 
 ## API Usage
 The application uses the Vatcomply API (`https://api.vatcomply.com/rates?base=USD`) to fetch real-time exchange rates. No API key is required.
-
-## Notes
-- Currency List: Supports a subset of currencies (`USD`, `EUR`, `GBP`, `JPY`, `CAD`, `AUD`) for simplicity. Extend the `currencies` array in `CurrencyContext.jsx` using `Object.keys(exchangeRates)` for more currencies.
-- Error Handling: Includes validation for negative amounts and API failures with user-friendly error messages.
-- Styling: Adheres to the Figma design with a linear gradient background (#FDFBFB to #EBEDEE), Pacifico font for the heading, and specific colors (#228B22 for labels/result, #E2FCBB for swap button, #FF0000 for errors).
-- Scalability: The Context API ensures the app is maintainable and ready for additional features like conversion history or currency flags.
 
 ## License
 Unlicensed, released into the public domain.
